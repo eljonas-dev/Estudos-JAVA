@@ -1,0 +1,4 @@
+sistemapagamento.PagarComCartao
+sistemapagamento.Pagamento
+sistemapagamento.MetodoPagamento
+sistemapagamento.PagarComPix
