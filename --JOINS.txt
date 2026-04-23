@@ -1,0 +1,75 @@
+--JOINS
+create table Cliente
+(id_cliente int identity primary key
+
+CREATE TABLE conjuge
+(
+	id_conjuge
+
+)
+
+)
+
+/* 
+Montar uma consulta com informações específicas de mais uma tabela.
+
+PRECISO ter um campo em camum que faça essa ligação (pk ou fk).
+
+Posso usar MÚLTIPLOS JOINS (várias tabelas diferentes)
+4 tipos de joins, inner, left, right e full
+
+os principais são inner e left, o resto sao mais raros. 
+
+(tem que especificar o nome da tabela anteeeeees)
+SELECT TAB1.campo
+
+Usar um table de cidades com nomes já gravados pra evitr variações de preenchimento
+*/
+
+--INNER JOIN
+/* 
+Ele é o join default.
+
+ex: tabela clientes e tabela cidades.
+
+vai pegar o que coincida nas duas tabelas. (só pega CLIENTES com CIDADE cadastrado, s enão tiver esse relacionamento ele não pega o registro.)
+
+select *  from cidade
+select * from cliente 
+
+select * 
+from cliente
+left join cidade
+on cliente.id_cidade = cidade.id_cidade --aqui é a relação, ligando *tabela1.coluna = tabela2.coluna*
+
+--o B.O é q eu tenho 2 campos nome, um pra cidade e outro pros clientes. Oq é PAIA (seria bom adicionar um alias)
+select cliente.id_cliente, cliente.nome,
+	cliente.endereco, cliente.bairro,
+	cidade.nome, cidade.uf
+from cliente
+left join cidade
+on cliente.id_cidade = cidade.id_cidade
+
+Podemos usar um alias nas tabelas, pra eu não ter qu eescrever o nome completo toda vez q for especificar o campo. Ex: "cliente.id_cidade" poderia ser só "c.id_cidade" (se eu colocasse from cidade as c)
+
+
+
+
+*/
+
+
+--LEFT JOIN
+/*
+traz todos os clientes e se encontrar a cidade ele traz tb a informação da cidade. Mas se não tiver ele traz como nulo. Ele garante todos os valores da primeira tabela.
+*/
+
+--RIGHT JOIN
+/* 
+É o cont´rario do left, traz todos os que coincidem e todos os registros da segunda tabela.
+*/
+
+
+-- FULL JOIN
+/* 
+tudo.
+*/
